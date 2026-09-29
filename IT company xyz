@@ -1,0 +1,129 @@
+# Case 01 – Corporate Footprint & Shadow IT Discovery
+
+**Target**: IT Company xyz (fictitious)    
+**Type of investigation**: Corporate OSINT / Shadow IT Discovery  
+**Date**: September 2026  
+**Analyst**: G.
+
+---
+
+# OSINT Report – Corporate Footprint & Shadow IT Discovery  
+**Target: Nordic Freight Solutions**
+
+## Date: 09/29/2026
+
+## Context of Request:
+
+> A fictional company, **IT company xyz**, requested an external assessment of its public digital footprint.  
+> The goal was to identify official assets, map employee digital presence, and detect possible Shadow IT or unofficial tools used by staff that could represent a security or compliance risk.
+
+---
+
+## Sources Used:
+
+- [x] Certificate Transparency (crt.sh)
+- [x] DNS / Historical DNS records
+- [x] BuiltWith / Wappalyzer
+- [x] LinkedIn (public profiles)
+- [x] GitHub / GitLab public repositories
+- [x] Google Dorks
+- [x] Public paste sites
+- [x] Cloud storage search (public buckets)
+- [x] WHOIS & domain-related records
+
+---
+
+## Summary of Results:
+
+## Summary of Results:
+
+| Element Reviewed               | Status | Notes                                                                 |
+|--------------------------------|--------|-----------------------------------------------------------------------|
+| Official Domain & Subdomains   | ✅     | 14 subdomains identified, 3 of which were not publicly advertised     |
+| Technology Stack               | ✅     | WordPress + AWS + Cloudflare confirmed                                |
+| Employee Digital Presence      | ⚠️     | 8 key employees mapped, several reused usernames across platforms     |
+| Shadow IT – GitHub             | ✅     | 2 personal repositories containing sensitive-looking configuration    |
+| Shadow IT – Cloud Storage      | ✅     | 1 publicly accessible bucket with configuration and log files         |
+| Shadow IT – Collaboration Tools| ⚠️     | Unofficial Notion workspace and Telegram channels identified          |
+| Personal Emails used for work  | ⚠️     | 3 instances of personal Gmail addresses used in professional contexts |
+
+---
+
+## Detailed Findings:
+
+### 1. Infrastructure Footprint
+
+- Main domain: `IT company xyz.com`
+- Notable subdomains discovered:
+  - `vpn.ITcompanyxyz.com`
+  - `staging.ITcompanyxyz.com`
+  - `dev.ITcompanyxyz.com`
+  - `docs.ITcompanyxyz.com` 
+- Technology stack: WordPress, AWS, Cloudflare, Microsoft 365
+- Certificate Transparency revealed several certificates issued for internal-looking hostnames
+
+### 2. Employee Digital Presence
+
+Eight employees in IT, Operations and Logistics roles were reviewed through public LinkedIn profiles and cross-platform username searches.
+
+Key observations:
+- Several employees reuse the same username pattern across GitHub, forums and other services
+- Two employees have public GitHub accounts containing references to the company
+- Three cases of personal Gmail addresses appearing in professional contexts (document signatures / public files)
+
+### 3. Shadow IT – GitHub Repositories
+
+- User `soandso-dev` (correlated to an employee) maintains a public repository containing VPN configuration files and internal client names
+- A second personal repository was found with environment variables and staging credentials references
+- Both repositories appear to have been made public unintentionally
+
+### 4. Shadow IT – Cloud Storage
+
+- A publicly accessible bucket named `IT-company-xyz-backups-2024` was identified
+- Content includes log files and configuration snippets
+- No authentication required at the time of the analysis
+
+### 5. Shadow IT – Collaboration Tools
+
+- An unofficial Notion workspace titled “xyz Clients – Internal” was found via a public link
+- Several Telegram groups and one Trello board containing company-related naming were identified
+- These tools do not appear in the official technology inventory
+
+---
+
+## Final Hypothesis:
+
+> IT company xyz maintains a relatively standard public infrastructure footprint.  
+> However, multiple instances of **Shadow IT** were identified, particularly through personal GitHub repositories and an exposed cloud storage bucket.  
+> Employee digital hygiene appears inconsistent, with personal accounts and unofficial collaboration tools being used for work-related activities.  
+> The overall risk level is assessed as **Medium**, with specific high-risk findings related to exposed configuration data.
+
+---
+
+## Recommendations:
+
+- [ ] Immediately review and secure the exposed cloud storage bucket
+- [ ] Audit personal GitHub/GitLab accounts of technical staff for company-related content
+- [ ] Implement a formal Shadow IT discovery and monitoring process
+- [ ] Introduce clear policies regarding the use of personal accounts and unofficial tools
+- [ ] Conduct periodic Certificate Transparency and subdomain monitoring
+- [ ] Provide security awareness training focused on data exposure via public repositories
+
+---
+
+## Annexes (not uploaded to GitHub – demonstrative only):
+
+- `evidence/infrastructure/` – subdomain lists, certificate logs, technology fingerprints
+- `evidence/employees/` – public profile correlations (anonymized)
+- `evidence/shadow-it/` – repository screenshots, bucket listings, Notion link captures
+- `diagrams/` – network map and timeline of discovered assets
+
+---
+
+## Disclaimer:
+
+> This report is entirely **fictional** and was created solely for demonstration and portfolio purposes.  
+> No real company or individual was investigated.  
+> All findings are based on simulated public sources and passive techniques only.  
+> No active scanning, unauthorized access, or contact with any real entity was performed.  
+> The content is intended to illustrate OSINT methodology, analysis structure, and reporting style.
